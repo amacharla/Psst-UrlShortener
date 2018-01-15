@@ -38,6 +38,7 @@ Stop the application:
 ```
 docker-compose down
 ```
+DISCLAIMER: If facing any isues repeat the last two commands above.
 
 If you as a developer would like to fork our current project and create your own domain-specific monty, please give us a shout-out.
 
