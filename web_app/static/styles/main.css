@@ -1,0 +1,183 @@
+/**
+* CONTENTS
+ *
+ * GENERIC
+ * Box-sizing...........Better default `box-sizing`.
+ * Layout...............HTML, BODY, PAGE styles.
+ *
+ * RESPONSIVE MEDIA QUERIES
+ * Mobile...............mobile styles.
+ * Tablet & Desktop.....tablet and desktop styles.
+ *
+ * DIV INTRO
+ * Headings.............H1–H6 styles.
+ * Break................HR style.
+ *
+ * FORM
+ * General..............FORM styles.
+ * Input................INPUT styles.
+ * Select...............SELECT, OPTION styles.
+ * Button...............BUTTON style.
+ *
+ * FOOTER
+ * General..............FOOTER, P style.
+ * Link.................A style.
+*/
+
+
+
+
+
+/*------------------------------------*\
+  #GENERIC
+\*------------------------------------*/
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  background-color: #F38232;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.page {
+  flex: 1 0 auto;
+  width: 70%;
+  margin: 3em auto 0;
+  color: #FFFFFF;
+  font-family: Helvetica, Georgia, Serif;
+}
+
+
+
+
+
+/*------------------------------------*\
+  #RESPONSIVE-MEDIA-QUERIES
+\*------------------------------------*/
+
+/**
+ * Mobile Styles
+ */
+
+@media only screen and (max-width: 768px) {
+
+}
+
+/**
+ * Tablet & Desktop Styles
+ */
+
+@media only screen and (min-width: 769px) {
+  [class="page"] {
+    width: 30em;
+  }
+  form input[type="text"] {
+    margin-right: 0.75em;
+  }
+}
+
+
+
+
+
+/*------------------------------------*\
+  #DIV-INTRO
+\*------------------------------------*/
+
+h1.title {
+  margin: 0;
+  padding: 0;
+  font-size: 1.5em;
+}
+
+hr {
+    display: block;
+    height: 0.5em;
+    width: 85%;
+    border: 0;
+    border-top: 0.15em solid #61B09D;
+    margin: 1em 0;
+    padding: 0;
+}
+
+
+
+/*------------------------------------*\
+  #FORM
+\*------------------------------------*/
+
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+form > * {
+  margin: 0.4em 0;
+}
+
+input {
+  font: 1em Helvetica;
+}
+
+form input[type="text"] {
+  width: 100%;
+  margin-top: 0.1em;
+  border-radius: 0.4em;
+  padding-left: 1em;
+  height: 2.7em;
+  border-width: thin;
+  outline: 0;
+}
+
+input::-webkit-input-placeholder {
+  color: #7B7B7B !important;
+}
+
+form button[type="submit"] {
+  color: #FFFFFF;
+  width: 98%;
+  height: 2.7em;
+  border: 0;
+  outline: 0;
+  font-weight: bold;
+  font-size: 1em;
+  -webkit-appearance: none;
+  -moz-appearance: none;  
+  background-color: #61B09D;
+  border-radius: 0.4em;
+  border: 1px solid #F6F6F6;
+}
+
+
+
+
+
+/*------------------------------------*\
+  #FOOTER
+\*------------------------------------*/
+
+footer {
+  flex-shrink: 0;
+  margin-top: 10em;
+  padding: 1.25em;
+  text-align: center;
+}
+
+p.footer {
+  font-family: Helvetica, Georgia, Serif;
+  font-size: 0.75em;
+}
+
+a.unsub {
+  color: #FFFFFF;
+}
