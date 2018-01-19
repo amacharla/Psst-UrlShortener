@@ -18,8 +18,11 @@ services:
 
   psst:
     restart: always
-    image: amacharla/psst:2.0
-    container_name: url_shortener
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: psst: 3.0
+    container_name: urlshortener
     depends_on:
       - mysql
     links:
