@@ -3,25 +3,20 @@ version: '2'
 services:
   mysql:
     restart: on-failure
-    image: mysql:5.7
-    container_name: mysql
+    image: amacharla/psst-db
+    container_name: mysql_db
     environment:
       - MYSQL_ROOT_PASSWORD=root
       - MYSQL_DATABASE=url_db
       - MYSQL_LOG_CONSOLE=true
     volumes:
-      - ./config_files/dbsetup.sql:/docker-entrypoint-initdb.d/dbsetup.sql
-      - ./config_files/mysqld.cnf:/etc/mysql/mysql.conf.d/mysqld.cnf
       - ./mysql_data:/var/lib/mysql
     ports:
       - "3306:3306"
 
   psst:
     restart: always
-    build:
-      context: .
-      dockerfile: Dockerfile
-    image: psst:3.0
+    image: amacharla/psst
     container_name: urlshortener
     depends_on:
       - mysql
@@ -29,6 +24,5 @@ services:
       - mysql
     volumes:
       - ./web_app:/var/www/url_shortener/web_app
-      - ./config_files/nginx_site:/etc/nginx/sites-available/nginx_site
     ports:
       - "80:80"

@@ -1,7 +1,0 @@
-uwsgi
-mysqlclient
-Flask==0.12.2
-flask_cors
-flask_sqlalchemy
-urllib3
-datetime
