@@ -21,7 +21,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: psst: 3.0
+    image: psst:3.0
     container_name: urlshortener
     depends_on:
       - mysql

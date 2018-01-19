@@ -1,20 +1,25 @@
 #!/usr/bin/python3
 """URL web application"""
 
-import uuid
-import base62
+import string
+import random
 from urllib.parse import urlparse
 from datetime import datetime
 from flask import Flask, request, redirect, render_template, abort, jsonify
 from flask_cors import CORS
 from flask_sqlalchemy import SQLAlchemy
 
+# Flask / CORS / Jinga setup
 app = Flask(__name__, template_folder='static')
 CORS(app, resources="/*", origins="0.0.0.0")
 
 # db connection
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+mysqldb://flask:f1ask@mysql/url_db'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
+
+def url_generator(size=6, chars=string.ascii_uppercase + string.digits):
+    return ''.join(random.choice(chars) for _ in range(size))
 
 # creates table in Mysql as `url` for the `url_db` database
 class Url(db.Model):
@@ -25,10 +30,9 @@ class Url(db.Model):
 
     def __init__(self, original):
         """ initilizes new rows with respective values """
-        self.short = base62.encode(int(uuid.uuid4()))
+        self.short =  url_generator()
         self.original = original
 
-db.create_all()
 #@app.errorhandler(404)
 #def page_not_found(e):
 #    return render_template('404.html'), 404
@@ -64,6 +68,7 @@ def uri_handle(url):
         abort(404)
     return redirect(originalUrl.original)
 
+db.create_all()
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=80)
