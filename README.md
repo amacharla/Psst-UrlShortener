@@ -45,7 +45,6 @@ If you as a developer would like to fork our current project and create your own
 ## Usage
 
 To run URL Shortener, please visit:
-http://sea-robins.holberton.us or
 http://psst.la or
 http://pssturl.com
 
