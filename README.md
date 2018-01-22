@@ -3,6 +3,8 @@
 ## Welcome
 Thanks for visiting our project, URL Shortener. It is written in Python, using Flask, mysql, nginx, HTML, CSS.
 
+The original version of the project can be found [here](https://github.com/birnbera/url_shortener).
+
 ## Table of Contents
 * [Requirements](#requirements)
 * [Usage](#usage)
