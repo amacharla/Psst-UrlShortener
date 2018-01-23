@@ -50,4 +50,4 @@ http://psst.la or
 http://pssturl.com
 
 ## Credits
-URL Shortener is owned and maintained by [Andrew Birnberg](http://github.com/birnbera), [Felicia Hsieh](http://github.com/feliciahsieh), [Anoop Marchala](http://github.com/amacharla), [Wendy Segura](http://github.com/wendysegura) and [Thomas Wang](http://github.com/thomaspwang). You can reply to us and to [@holbertonschool](https://twitter.com/holbertonschool) on Twitter for more updates on this project and our forked projects.
+URL Shortener is owned and maintained by [Anoop Marchala](http://github.com/amacharla) and [Thomas Wang](http://github.com/thomaspwang).
