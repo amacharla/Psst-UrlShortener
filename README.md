@@ -1,5 +1,7 @@
 # URL Shortener - Psst!
 
+https://img.shields.io/badge/pre--release-v.0.2--beta-blue.svg
+
 ## Welcome
 Thanks for visiting our project, URL Shortener. It is written in Python, using Flask, mysql, nginx, HTML, CSS.
 
