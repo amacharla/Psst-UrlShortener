@@ -37,20 +37,21 @@
 }
 
 html {
-  height: 100%;
-  background-color: #F38232;
+  height: 100vh;
+  background-color: rgba(243, 130, 50, 0.95);
 }
 
 body {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 100%;
+  padding-top: 1em;
 }
 
 .page {
   flex: 1 0 auto;
   width: 70%;
-  margin: 3em auto 0;
+  margin: auto;
   color: #FFFFFF;
   font-family: Helvetica, Georgia, Serif;
 }
@@ -167,17 +168,55 @@ form button[type="submit"] {
 \*------------------------------------*/
 
 footer {
-  flex-shrink: 0;
-  margin-top: 10em;
-  padding: 1.25em;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
   text-align: center;
+  padding-top: 0.5em;
+  padding-bottom: 2em;
 }
 
-p.footer {
-  font-family: Helvetica, Georgia, Serif;
-  font-size: 0.75em;
+.icon-link {
+  width: 3.750em;
+  height: 3.750em;
+  background-color: #666;
+  line-height: 3.750em;
+  text-align: center;
+  vertical-align: middle;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+.icon-link.round {
+  border-radius: 50%;
+}
+.icon-link:hover.github {
+  border: 2px solid #444;
+}
+.icon-link:hover .fa-github {
+  color: #444;
+  -webkit-transition: color 150ms ease-in-out;
+  transition: color 150ms ease-in-out;
+}
+.icon-link.fill.github {
+  background-color: #61B09D;
+}
+.icon-link.fill.github:hover {
+  background-color: #fff;
+}
+.icon-link.fill.github:hover .fa-github {
+  color: #444;
+  -webkit-transition: color 150ms ease-in-out;
+  transition: color 150ms ease-in-out;
+}
+.icon-link .fa {
+  color: #fff;
+  line-height: 60px;
+  font-size: 2.250em;
 }
 
-a.unsub {
-  color: #FFFFFF;
-}
+
